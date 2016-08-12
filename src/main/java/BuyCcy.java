@@ -33,7 +33,6 @@ public class BuyCcy {
         Assert.assertEquals(actualResult, expectedResult);
 
         driver.quit();
-
     }
 
 }
