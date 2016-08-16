@@ -18,7 +18,7 @@ public class BuyCurrency {
         WebDriver driver = new FirefoxDriver();
         driver.get("http://finance.i.ua/");
         driver.manage().window().maximize();
-        driver.findElement(By.xpath("//span[@onclick='fn_changeSell(this)']")).click();
+        driver.findElement(By.xpath("//table[@class='converter']//span[text()='купить']")).click();
         driver.findElement(By.id("fn_s1")).clear();
         driver.findElement(By.id("fn_s1")).sendKeys("2000");
 
