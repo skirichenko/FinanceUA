@@ -7,18 +7,18 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class BuyCcy {
+public class BuyCurrency {
 
     @Test
 
     public void testName() throws Exception {
 
-        String expectedResult  = "49 700,82";
+        String expectedResult  = "50 230,28";
 
         WebDriver driver = new FirefoxDriver();
         driver.get("http://finance.i.ua/");
         driver.manage().window().maximize();
-        driver.findElement(By.xpath("html/body/div[1]/div[5]/div[2]/div/div/div[2]/div[1]/div[3]/form/table/tbody/tr[1]/th[2]/ul/li[2]/i/span")).click();
+        driver.findElement(By.xpath("//span[@onclick='fn_changeSell(this)']")).click();
         driver.findElement(By.id("fn_s1")).clear();
         driver.findElement(By.id("fn_s1")).sendKeys("2000");
 
